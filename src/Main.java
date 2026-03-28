@@ -1,7 +1,5 @@
 import command.*;
-import enums.Operacoes;
 import registry.ProcessDataRegistry;
-import service.impl.CalculadoraImpl;
 
 import java.util.Scanner;
 
