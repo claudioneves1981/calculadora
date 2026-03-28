@@ -10,7 +10,12 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-      final var registry = new ProcessDataRegistry();
+        final var registry = new ProcessDataRegistry();
+
+        registry.register(1, new AdicaoCommand());
+        registry.register(2, new SubtracaoCommand());
+        registry.register(3, new MultiplicaoCommand());
+        registry.register(4, new DivisaoCommand());
 
       int inputNumber;
 
@@ -28,11 +33,6 @@ public class Main {
               """);
 
           inputNumber = input.nextInt();
-
-          registry.register(1, new AdicaoCommand());
-          registry.register(2, new SubtracaoCommand());
-          registry.register(3, new MultiplicaoCommand());
-          registry.register(4, new DivisaoCommand());
 
           if(inputNumber > 0 && inputNumber < 5) {
 
