@@ -36,9 +36,9 @@ public class Main {
 
           final var command = registry.resolve(inputNumber);
           System.out.println("Digite um numero: ");
-          int a = input.nextInt();
+          double a = input.nextInt();
           System.out.println("Digite outro numero: ");
-          int b = input.nextInt();
+          double b = input.nextInt();
           command.execute(a, b);
 
           }

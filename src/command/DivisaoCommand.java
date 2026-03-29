@@ -1,13 +1,11 @@
 package command;
 
-import enums.Operacoes;
-import service.impl.CalculadoraImpl;
+
 
 public class DivisaoCommand extends Command {
 
-    CalculadoraImpl calculadora = new CalculadoraImpl();
     @Override
-    public void execute(int a, int b) {
-        System.out.println(calculadora.calcular(a,b, Operacoes.DIVISAO));
+    public void execute(double a, double b) {
+        System.out.println(b == 0 ? "divisao por 0" : String.valueOf(a / b));
     }
 }
